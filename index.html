@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card">
+
+        <div class="tape"></div>
+
+        <header>
+            <h1>Checklist</h1>
+            <span id="contador">0 de 0 feitas</span>
+        </header>
+
+        <form id="formulario-tarefa">
+
+            <input
+                type="text"
+                placeholder="O que eu preciso fazer?"
+                id="campo-tarefa"
+            />
+
+            <button type="submit" id="botao-adicionar">
+                Adicionar
+            </button>
+
+        </form>
+
+        <p id="status-api">Conectando à API...</p>
+
+        <ul id="lista-tarefas">
+            <li class="carregando">Carregando tarefa...</li>
+        </ul>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
