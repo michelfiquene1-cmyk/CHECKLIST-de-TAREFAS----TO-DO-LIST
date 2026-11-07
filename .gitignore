@@ -1,0 +1,9 @@
+# Saída gerada para hospedagem e estado local de ferramentas.
+/dist/
+/.netlify/
+/node_modules/
+/.env
+/.env.*
+*.log
+.DS_Store
+Thumbs.db

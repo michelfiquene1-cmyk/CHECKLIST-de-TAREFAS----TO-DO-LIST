@@ -214,3 +214,52 @@ button:hover {
 .carregando {
     color: var(--ink-soft);
 }
+
+/* Mantém o cartão original e adapta os controles a telas menores. */
+body { padding: 40px 16px; }
+main { width: min(100%, 600px); }
+header { flex-wrap: wrap; gap: 10px; padding-bottom: 20px; border-bottom: 2px dashed var(--line); }
+header::after { content: none; }
+form { margin-top: 0; }
+input { min-width: 0; }
+button, select, input { font: inherit; }
+button, select { min-height: 44px; }
+button { font-size: 13px; }
+button:disabled, input:disabled, select:disabled { cursor: wait; opacity: .65; }
+:focus-visible { outline: 3px solid #805500; outline-offset: 3px; }
+input:focus { border-color: #805500; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.armazenamento { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 20px; font-size: 12px; }
+select { max-width: 100%; padding: 8px; color: var(--ink); background: #F8F9FF; border: 1px solid var(--ink-soft); border-radius: 6px; }
+#status-api { font-size: 12px; line-height: 1.7; margin: 10px 0 18px; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.filtros button, .secundario { background: #EFF1F8; }
+.filtros button:hover, .secundario:hover { background: #E0E4F0; }
+.filtros [aria-pressed="true"] { background: var(--ink); color: white; }
+#mensagem { min-height: 2.8em; font-size: 12px; line-height: 1.6; color: #275F31; overflow-wrap: anywhere; }
+#mensagem.erro { color: #A12643; }
+#lista-tarefas li { padding: 12px 0; margin: 0; border-bottom: 1px solid #E6E8EE; gap: 8px; }
+#lista-tarefas li:last-child { border-bottom: 0; }
+.checkbox { flex: 0 0 28px; width: 28px; height: 28px; margin: 0; padding: 0; accent-color: #357E40; cursor: pointer; }
+.texto-tarefa { min-width: 0; overflow-wrap: anywhere; line-height: 1.7; }
+.concluida { text-decoration: line-through; color: var(--ink-soft); }
+.botao-editar, .botao-excluir { padding: 8px; font-size: 12px; background: transparent; }
+.botao-editar:hover { background: #FFF1D6; }
+.botao-excluir { color: #A12643; }
+.botao-excluir:hover { background: #FFF0F3; color: #A12643; }
+.edicao { display: flex; flex: 1; flex-wrap: wrap; gap: 8px; }
+.edicao input { flex-basis: 100%; width: 100%; }
+.vazio { font-size: 14px; line-height: 1.8; color: var(--ink-soft); }
+@media (max-width: 480px) {
+    .card { padding: 38px 18px 20px; }
+    h1 { font-size: 28px; }
+    #formulario-tarefa { flex-wrap: wrap; }
+    #campo-tarefa { flex-basis: 100%; width: 100%; font-size: 16px; }
+    #botao-adicionar { width: 100%; }
+    .filtros button { flex: 1; padding: 8px; font-size: 11px; }
+    #lista-tarefas li { flex-wrap: wrap; }
+    .texto-tarefa { flex-basis: calc(100% - 36px); }
+    .botao-editar { margin-left: 36px; }
+    .edicao input { font-size: 16px; }
+}
